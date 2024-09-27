@@ -1,13 +1,11 @@
 let friendList = [];
 
 function add (){
-    let friend = document.getElementById('nome-amigo').value;
+    let friend = document.getElementById('nome-amigo');
 
-    alert(friend);
-
-    friendList.push(friend);
-
-    alert(friendList);
-
+    friendList.push(friend.value);
+    
     document.getElementById('lista-amigos').innerHTML = friendList.join(',');
+
+    friend.value = '';
 }
